@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Twette>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tweet>
  */
-class TwetteFactory extends Factory
+class TweetFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,8 @@ class TwetteFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'body' => fake()->sentence(),
+            'created_by' => User::factory()
         ];
     }
 }
