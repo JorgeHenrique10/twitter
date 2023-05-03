@@ -17,11 +17,16 @@
                     @enderror
                 </div>
                 <div class="flex flex-row p-2">
-                    <div class="w-full">
-                        Buttons
+                    <div class="flex w-full space-x-2">
+                        <x-timeline.btn icon="media" />
+                        <x-timeline.btn icon="gif" />
+                        <x-timeline.btn icon="check" />
+                        <x-timeline.btn icon="emoji" />
+                        <x-timeline.btn icon="schedule" />
+                        <x-timeline.btn icon="location" />
                     </div>
                     <div class="flex w-full justify-end">
-                        <button class="bg-twitter py-2 px-4 rounded-full font-extrabold"
+                        <button class="bg-twitter py-2 px-4 rounded-full font-extrabold hover:bg-[#1b80ce]"
                             wire:click='tweet'>Tweet</button>
                     </div>
                 </div>

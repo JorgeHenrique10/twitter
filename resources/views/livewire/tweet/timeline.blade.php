@@ -1,6 +1,10 @@
-<div class="mt-10 text-white text-lg">
+<div class="text-white text-lg">
+    <div class="flex justify-center border-b-2 border-lines p-4 text-lg">
+        <span>Show 210 Tweets</span>
+    </div>
+
     @foreach ($tweets as $tweet)
-        <div>
+        <div class="pt-2 border-">
             ({{ $loop->index }})
             .
             {{ $tweet->body }}

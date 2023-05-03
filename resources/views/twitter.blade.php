@@ -24,16 +24,19 @@
 
         {{-- Menu --}}
         <div class="flex flex-col text-xl font-extrabold space-y-3 pt-1">
-            <x-menu.item icon="twitter" route="#"></x-menu.item>
-            <x-menu.item icon="home" route="#" title="Home" />
-            <x-menu.item icon="explore" route="#" title="Explorer" />
-            <x-menu.item icon="notification" route="#" title="Notifications" />
-            <x-menu.item icon="message" route="#" title="Messages" />
-            <x-menu.item icon="bookmarks" route="#" title="Bookmarks" />
-            <x-menu.item icon="twitter-blue" route="#" title="Twitter Blue" />
-            <x-menu.item icon="profile" route="#" title="Profile" />
-            <x-menu.item icon="more" route="#" title="More" />
-            <x-menu.button-tweet title="Tweet" />
+            <div class="fixed">
+                <x-menu.item icon="twitter" route="#"></x-menu.item>
+                <x-menu.item icon="home" route="#" title="Home" />
+                <x-menu.item icon="explore" route="#" title="Explorer" />
+                <x-menu.item icon="notification" route="#" title="Notifications" />
+                <x-menu.item icon="message" route="#" title="Messages" />
+                <x-menu.item icon="bookmarks" route="#" title="Bookmarks" />
+                <x-menu.item icon="twitter-blue" route="#" title="Twitter Blue" />
+                <x-menu.item icon="profile" route="#" title="Profile" />
+                <x-menu.item icon="more" route="#" title="More" />
+                <x-menu.button-tweet title="Tweet" />
+
+            </div>
 
         </div>
         {{-- End Menu --}}
@@ -43,12 +46,16 @@
 
             <x-timeline.home />
 
-            <livewire:tweet.create>
+            <livewire:tweet.create />
+
+            <livewire:tweet.timeline />
 
         </div>
         {{-- END TIMELINE --}}
 
-        <div class="">As</div>
+        <div class="w-full">
+            <div class="fixed w-full">As</div>
+        </div>
 
     </div>
     @livewireScripts()
