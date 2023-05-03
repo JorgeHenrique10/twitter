@@ -1,5 +1,5 @@
 <div class="text-white text-lg">
-    <div class="flex justify-center border-b-2 border-lines p-4 text-lg">
+    <div class="flex justify-center border-b-2 border-lines p-4 text-lg text-twitter cursor-pointer hover:bg-gray-950">
         <span>Show 210 Tweets</span>
     </div>
 
