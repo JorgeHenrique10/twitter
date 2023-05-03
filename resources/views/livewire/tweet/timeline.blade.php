@@ -7,7 +7,7 @@
         </div>
     @endforeach
 
-    <div class=" h-10 w-10 x-data="{
+    <div class=" h-10 w-10" x-data="{
         infinityScroll() {
             const observer = new IntersectionObserver((items) => {
                 items.forEach((item) => {
