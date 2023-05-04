@@ -2,8 +2,8 @@
 
     <section class="flex flex-row space-x-4 items-start">
         <div class=" min-w-[48px] max-w-[48px]">
-            <img class="rounded-full" src="https://pbs.twimg.com/profile_images/1562631561690107905/tOkWnifg_400x400.jpg"
-                alt="teste">
+            <img class="rounded-full hover:opacity-80 cursor-pointer"
+                src="https://pbs.twimg.com/profile_images/1562631561690107905/tOkWnifg_400x400.jpg" alt="teste">
         </div>
         <div class="flex flex-col">
             <div class="flex space-x-4 items-end">

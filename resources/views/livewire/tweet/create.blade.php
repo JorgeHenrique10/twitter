@@ -3,7 +3,7 @@
         <div class="flex flex-row border-b border-lines">
             <div class="p-4">
                 <div class="w-12 cursor-pointer">
-                    <img class=" rounded-full"
+                    <img class=" rounded-full hover:opacity-80"
                         src="https://pbs.twimg.com/profile_images/1562631561690107905/tOkWnifg_400x400.jpg"
                         alt="">
                 </div>
