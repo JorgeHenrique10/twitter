@@ -1,3 +1,5 @@
+@props(['name', 'verified' => false, 'verifiedOrg'])
+
 <div class="pl-4 pt-2 pb-2 border-b-2 border-lines">
 
     <section class="flex flex-row space-x-4 items-start">
@@ -8,7 +10,16 @@
         <div class="flex flex-col">
             <div class="flex space-x-4 items-end">
                 <div class="font-bold text-lg">
-                    <span>netflixbrasil</span>
+                    <span class="flex items-center space-x-2">
+                        <span> {{ $name }} </span>
+                        @if ($verified)
+                            <x-icons.verified />
+                        @endif
+
+                        @if ($verifiedOrg)
+                            <x-icons.verifiedOrg />
+                        @endif
+                    </span>
                 </div>
                 <div class="text-base text-[#71767b] tracking-tight">
                     <span>@NetflixBrasil · 4h</span>

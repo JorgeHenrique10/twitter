@@ -5,7 +5,8 @@
     </div>
 
     @foreach ($tweets as $tweet)
-        <x-timeline.post>
+        <x-timeline.post name="{{ $tweet->createdBy->name }}" verified="{{ $tweet->createdBy->subscribed('default') }}"
+            verifiedOrg="{{ $tweet->createdBy->subscribed('verified_org') }}">
             {{ $tweet->body }}
         </x-timeline.post>
     @endforeach
@@ -22,7 +23,7 @@
                 threshold: 0.5, // 0 ... 1
                 rootMargin: '100px'
             })
-    
+
             observer.observe(this.$el)
         }
     }" x-init="infinityScroll()">

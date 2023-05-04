@@ -31,7 +31,8 @@
                 <x-menu.item icon="notification" route="#" title="Notifications" />
                 <x-menu.item icon="message" route="#" title="Messages" />
                 <x-menu.item icon="bookmarks" route="#" title="Bookmarks" />
-                <x-menu.item icon="twitter-blue" route="#" title="Twitter Blue" />
+                <x-menu.item icon="twitter-blue" route="/subscribe" title="Twitter Blue" />
+                <x-menu.item icon="organization" route="/verified-organization" title="Verified Orgs" />
                 <x-menu.item icon="profile" route="#" title="Profile" />
                 <x-menu.item icon="more" route="#" title="More" />
                 <x-menu.button-tweet title="Tweet" />
