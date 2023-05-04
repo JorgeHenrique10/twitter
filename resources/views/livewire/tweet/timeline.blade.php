@@ -1,14 +1,13 @@
 <div class="text-white text-lg">
-    <div class="flex justify-center border-b-2 border-lines p-4 text-lg text-twitter cursor-pointer hover:bg-gray-950">
+    <div
+        class="flex justify-center items-center border-b-2 border-lines h-[48px] text-base font-medium text-twitter cursor-pointer hover:bg-gray-950">
         <span>Show 210 Tweets</span>
     </div>
 
     @foreach ($tweets as $tweet)
-        <div class="pt-2 border-">
-            ({{ $loop->index }})
-            .
+        <x-timeline.post>
             {{ $tweet->body }}
-        </div>
+        </x-timeline.post>
     @endforeach
 
     <div class=" h-10 w-10" x-data="{
