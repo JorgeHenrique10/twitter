@@ -17,7 +17,10 @@ class ShowMore extends Component
 
     public function more()
     {
+
         $this->emitTo(Timeline::class, 'show::more');
+
+        session()->put('latest-tweet', Tweet::query()->latest()->first()->id);
     }
 
     public function getCountTweetsProperty()
