@@ -1,10 +1,7 @@
 <div class="text-white text-lg">
-    <div
-        class="flex justify-center items-center border-b-2 border-lines h-[48px] text-base font-medium text-twitter cursor-pointer hover:bg-gray-950">
-        <span>Show 210 Tweets</span>
-    </div>
+    <livewire:tweet.show-more />
 
-    @foreach ($tweets as $tweet)
+    @foreach ($this->tweets as $tweet)
         <x-timeline.post name="{{ $tweet->createdBy->name }}" verified="{{ $tweet->createdBy->subscribed('default') }}"
             verifiedOrg="{{ $tweet->createdBy->subscribed('verified_org') }}">
             {{ $tweet->body }}
@@ -23,7 +20,7 @@
                 threshold: 0.5, // 0 ... 1
                 rootMargin: '100px'
             })
-
+    
             observer.observe(this.$el)
         }
     }" x-init="infinityScroll()">

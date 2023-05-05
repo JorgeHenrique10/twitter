@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Tweet;
 
+use App\Events\TweetHasBennCreated;
 use App\Models\Tweet;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
@@ -29,6 +30,7 @@ class Create extends Component
             'body' => $this->body,
             'created_by' => auth()->id()
         ]);
+        event(new TweetHasBennCreated());
 
         $this->emit('tweet::created');
         $this->reset('body');

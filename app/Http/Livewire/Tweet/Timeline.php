@@ -7,13 +7,25 @@ use Livewire\Component;
 
 class Timeline extends Component
 {
-    protected $listeners = ['tweet::created' => '$refresh'];
+    protected $listeners = [
+        // 'tweet::created' => '$refresh',
+        'show::more' => '$refresh',
+    ];
     public int $perPage = 10;
 
     public function render()
     {
-        $tweets = Tweet::query()->latest()->paginate($this->perPage);
-        return view('livewire.tweet.timeline', ['tweets' => $tweets]);
+
+        return view('livewire.tweet.timeline');
+    }
+
+    public function getTweetsProperty()
+    {
+        $data = Tweet::query()->latest()->paginate($this->perPage);
+
+        session()->put('latest-tweet', $data->first()->id);
+
+        return $data;
     }
 
     public function loadMore(): void
