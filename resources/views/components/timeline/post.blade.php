@@ -30,12 +30,11 @@
             </div>
             <div class="flex space-x-8">
 
-                <x-timeline.btn icon="media" />
-                <x-timeline.btn icon="media" />
-                <x-timeline.btn icon="media" />
-                <x-timeline.btn icon="media" />
-                <x-timeline.btn icon="media" />
-                <x-timeline.btn icon="media" />
+                <x-timeline.action icon="reply" color="blue" />
+                <x-timeline.action icon="retweet" color="green" />
+                <x-timeline.action icon="like" color="pink" />
+                <x-timeline.action icon="view" color="blue" counter='200' />
+                <x-timeline.action icon="share" color="blue" />
 
             </div>
         </div>
